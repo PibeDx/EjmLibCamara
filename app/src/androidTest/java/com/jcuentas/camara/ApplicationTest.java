@@ -1,4 +1,4 @@
-package susalud.gob.pe.ejmlibcamara;
+package com.jcuentas.camara;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
