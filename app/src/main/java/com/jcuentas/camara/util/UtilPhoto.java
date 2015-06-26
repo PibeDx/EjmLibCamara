@@ -310,6 +310,7 @@ public class UtilPhoto {
     public static void compressImage(String imageUri) {
         //Crear Carpeta
         crearCarpeta(PATH);
+
         String filePath = getRealPathFromURI(imageUri);
         Bitmap scaledBitmap = null;
         BitmapFactory.Options options = new BitmapFactory.Options();
@@ -338,7 +339,6 @@ public class UtilPhoto {
             } else {
                 actualHeight = (int) maxHeight;
                 actualWidth = (int) maxWidth;
-
             }
         }
         options.inSampleSize = utils.calculateInSampleSize(options, actualWidth, actualHeight);
@@ -353,7 +353,6 @@ public class UtilPhoto {
         }
         catch(OutOfMemoryError exception){
             exception.printStackTrace();
-
         }
         try{
             scaledBitmap = Bitmap.createBitmap(actualWidth, actualHeight, Bitmap.Config.ARGB_8888);
